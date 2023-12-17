@@ -1,0 +1,11 @@
+<div class="caluclator-container">
+    <h1>Calculator App Online</h1>
+    <div class="calculatrice">
+        <input type="text" [value]="display" readonly>
+        <div class="buttons">
+            <app-button *ngFor="let button of buttons" [label]="button" (clickEvent)="handleButtonClick(button)"></app-button>
+            <app-button  label="C" (clickEvent)="resetCalculator()"></app-button>
+        </div>
+    </div>
+</div>
+
